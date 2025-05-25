@@ -101,6 +101,50 @@ Query Params:
 Filters on the basis of author or title provided in query params
 ```
 
+### 5.4 GET BOOK Details with Reviews – GET /api/books/id
+```API Url: http:localhost:5000/api/books/id```
+```
+Query Params:
+1. page=1&limit=10
+
+Returns
+Book info
+Paginated reviews
+Average rating
+
+Sample Reponse:
+
+{
+    "book": {
+        "_id": "68331e50401a5d755320659e",
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "genre": "Self-help",
+        "__v": 0
+    },
+    "avgRatings": 3,
+    "reviews": [
+        {
+            "_id": "683325ba6aed6335845a5da3",
+            "user": {
+                "_id": "68331a4316a4dec6280a907c",
+                "username": "Sanskar"
+            },
+            "book": "68331e50401a5d755320659e",
+            "rating": 3,
+            "comment": "Good",
+            "createdAt": "2025-05-25T14:14:18.999Z",
+            "updatedAt": "2025-05-25T14:14:18.999Z",
+            "__v": 0
+        }
+    ]
+}
+As in the above response, the api returns the book with the given id along with the review submitted for that book and the user details who submitted that review 
+
+Accepts page and limit as query param for pagination
+Filters on the basis of author or title provided in query params
+```
+
 
 
 
