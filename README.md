@@ -44,8 +44,8 @@ Body:
 ```
 
 ### 4.2 Login – POST /api/login
-```
 ```API Url: http:localhost:5000/api/login```
+```
 Body: 
 {
   "email": "john@example.com",
@@ -147,6 +147,7 @@ Accepts page and limit as query param for pagination
 ### 6.1 Create Reviews – POST /api/reviews/:bookId/reviews
 
 ```Header must have Authorization field with token to use these APIs ensuring only authorised users can create/update/delete reviews```
+
 ```API Url: http:localhost:5000/api/reviews/bookId/reviews```
 ```
 Headers:
