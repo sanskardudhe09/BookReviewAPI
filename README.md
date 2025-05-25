@@ -43,6 +43,24 @@ Body:
 }
 ```
 
+### 4.2 Login – POST /api/login
+```API Url: http:localhost:5000/api/login```
+```
+Body: 
+{
+  "email": "john@example.com",
+  "password": "123456"
+}
+Response:
+{
+  "token": "your_jwt_token"
+}
+🔐 Use this token in Postman headers:
+```Authorization: your_jwt_token```
+Ensure that the token entered is same as the token received on login of user
+```
+
+
 
 
 
