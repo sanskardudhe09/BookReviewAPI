@@ -84,10 +84,21 @@ Body:
 ```API Url: http:localhost:5000/api/books```
 ```
 Query Params:
-- author=paulo
-* genre=fiction
-+ page=1&limit=10
+1. author=paulo
+2. genre=fiction
+3. page=1&limit=10
 
+Response is paginated as per 10 records per page
+```
+
+### 5.3 Search Books – GET /api/books/search?q=queryname
+```API Url: http:localhost:5000/api/search?q=queryname```
+```
+Query Params:
+1. author=paulo
+2. title=fiction
+
+Filters on the basis of author or title provided in query params
 ```
 
 
