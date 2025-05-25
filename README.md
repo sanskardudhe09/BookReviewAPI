@@ -101,7 +101,7 @@ Query Params:
 Filters on the basis of author or title provided in query params
 ```
 
-### 5.4 GET BOOK Details with Reviews – GET /api/books/id
+### 5.4 GET BOOK Details with Reviews – GET /api/books/:id
 ```API Url: http:localhost:5000/api/books/id```
 ```
 Query Params:
@@ -142,8 +142,96 @@ Sample Reponse:
 As in the above response, the api returns the book with the given id along with the review submitted for that book and the user details who submitted that review 
 
 Accepts page and limit as query param for pagination
-Filters on the basis of author or title provided in query params
 ```
+### 6. Review APIs
+### 6.1 Create Reviews – POST /api/reviews/:bookId/reviews
+
+```Header must have Authorization field with token to use these APIs ensuring only authorised users can create/update/delete reviews```
+```API Url: http:localhost:5000/api/reviews/bookId/reviews```
+```
+Headers:
+Authorization: your_jwt_token
+
+Body: 
+{
+  "rating": 4,
+  "comment": "Amazing book!"
+}
+```
+
+### 6.2 Update Reviews – PUT /api/reviews/:reviewId
+```API Url: http:localhost:5000/api/reviews/:reviewId```
+```
+Headers:
+Authorization: your_jwt_token
+
+Body: 
+{
+  "rating": 5,
+  "comment": "Updated comment: Absolutely loved it!"
+}
+
+```
+
+### 6.3 Delete Reviews – DELETE /api/reviews/:reviewId
+```API Url: http:localhost:5000/api/reviews/:reviewId```
+```
+Headers:
+Authorization: your_jwt_token
+
+```
+### 7. 💡 Decisions & Assumptions
+
+```
+✅ JWT Authentication secures private routes.
+
+🚫 One user can review a book only once (enforced with a compound index on book + user using MongoDB).
+
+🛡️ Users can only update/delete their own reviews.
+
+📄 Reviews and book listings support pagination.
+
+🔍 Search supports partial matches on title or author.
+```
+### 8. Database Schema
+### 8.1 User Model
+
+```
+{
+  username: String, // required, unique
+  email: String,    // required, unique
+  password: String  // hashed using bcrypt
+}
+
+```
+
+### 8.2 Book Model
+
+```
+{
+  title: String,        // required
+  author: String,       // required
+  genre: String,
+}
+
+```
+
+### 8.3 Review Model
+
+```
+{
+  book: ObjectId,   // reference to Book
+  user: ObjectId,   // reference to User
+  rating: Number,   // min: 1, max: 5
+  comment: String
+}
+
+```
+```📌 Compound Unique Index: { book: 1, user: 1 } to prevent duplicate reviews.```
+
+
+
+
 
 
 
