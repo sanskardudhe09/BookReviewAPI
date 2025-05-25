@@ -22,4 +22,14 @@ MONGO_URI=mongodb://localhost:27017/bookreviews
 JWT_SECRET=your_secret_key
 
 💡 Ensure MongoDB is running locally or use MongoDB Atlas connection string for production.
+```
+
+### 3. Running the App Locally
+
+```npm start
+
+The API will run on: http://localhost:5000
+```
+
+
 
