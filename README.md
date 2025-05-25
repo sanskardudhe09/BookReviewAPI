@@ -84,9 +84,9 @@ Body:
 ```API Url: http:localhost:5000/api/books```
 ```
 Query Params:
--author=paulo
--genre=fiction
--page=1&limit=10
+- author=paulo
+- genre=fiction
+- page=1&limit=10
 
 ```
 
