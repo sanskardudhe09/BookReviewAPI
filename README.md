@@ -57,10 +57,11 @@ Response:
 {
   "token": "your_jwt_token"
 }
-
+```
 
 🔐 Use this token in Postman headers:
 ```Authorization: your_jwt_token```
+```
 Ensure that the token entered is same as the token received on login of user
 ```
 
