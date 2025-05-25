@@ -33,6 +33,7 @@ The API will run on: http://localhost:5000
 ```
 ### 4. Authentication APIs
 ### 4.1 Signup – POST /api/signup
+```API Url: http:localhost:5000/api/signup```
 ```
 Body: 
 {
