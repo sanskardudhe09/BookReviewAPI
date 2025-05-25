@@ -12,6 +12,7 @@ A RESTful API built with **Node.js**, **Express**, **MongoDB**, and **JWT** for 
 git clone https://github.com/yourusername/book-review-api.git
 cd book-review-api
 npm install
+```
 
 ### 2. Create a `.env` File in the Root Directory
 
@@ -19,4 +20,6 @@ npm install
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/bookreviews
 JWT_SECRET=your_secret_key
+
+💡 Ensure MongoDB is running locally or use MongoDB Atlas connection string for production.
 
