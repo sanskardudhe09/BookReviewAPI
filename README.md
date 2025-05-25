@@ -140,7 +140,8 @@ Sample Reponse:
         }
     ]
 }
-As in the above response, the api returns the book with the given id along with the review submitted for that book and the user details who submitted that review 
+As in the above response, the api returns the book with the given id along with the review submitted for that 
+book and the user details who submitted that review 
 
 Accepts page and limit as query param for pagination
 ```
