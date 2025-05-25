@@ -11,4 +11,12 @@ A RESTful API built with **Node.js**, **Express**, **MongoDB**, and **JWT** for 
 ```bash
 git clone https://github.com/yourusername/book-review-api.git
 cd book-review-api
-npm install
+npm install```
+
+### 2. Create a .env file in the root directory
+```env
+Copy
+Edit
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/bookreviews
+JWT_SECRET=your_secret_key```
