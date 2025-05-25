@@ -85,8 +85,8 @@ Body:
 ```
 Query Params:
 - author=paulo
-- genre=fiction
-- page=1&limit=10
+* genre=fiction
++ page=1&limit=10
 
 ```
 
