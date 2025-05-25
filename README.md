@@ -26,8 +26,8 @@ JWT_SECRET=your_secret_key
 
 ### 3. Running the App Locally
 
-```npm start
-
+```
+npm start
 The API will run on: http://localhost:5000
 ```
 
