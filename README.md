@@ -11,6 +11,7 @@ A RESTful API built with **Node.js**, **Express**, **MongoDB**, and **JWT** for 
 ```bash
 git clone https://github.com/yourusername/book-review-api.git
 cd book-review-api
+npm init -y
 npm install
 ```
 
@@ -30,6 +31,18 @@ JWT_SECRET=your_secret_key
 npm start
 The API will run on: http://localhost:5000
 ```
+### 4. Authentication APIs
+### 4.1 Signup – POST /api/signup
+```
+Body: 
+{
+  "username": "john",
+  "email": "john@example.com",
+  "password": "123456"
+}
+```
+
+
 
 
 
